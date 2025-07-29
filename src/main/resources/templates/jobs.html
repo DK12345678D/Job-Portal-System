@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" th:action="@{/jobs}">
+    <input type="text" name="keyword" placeholder="Search jobs..." />
+    <button type="submit">Search</button>
+</form>
+<div th:each="job : ${jobs}">
+    <h3 th:text="${job.title}"></h3>
+    <p th:text="${job.description}"></p>
+    <form th:action="@{'/apply/' + ${job.id}}" method="post">
+        <button type="submit">Apply</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/employer/jobs}" method="post">
+    <input type="text" name="title" placeholder="Job Title" required />
+    <textarea name="description" placeholder="Job Description" required></textarea>
+    <button type="submit">Post Job</button>
+</form>
+</body>
+</html>
